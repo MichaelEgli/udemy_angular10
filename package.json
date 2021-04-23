@@ -1,0 +1,22 @@
+{
+  "name": "udemy_angular10",
+  "version": "1.0.0",
+  "description": "uebungen angular 10 von udemy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelEgli/udemy_angular10.git"
+  },
+  "author": "Michael Egli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelEgli/udemy_angular10/issues"
+  },
+  "homepage": "https://github.com/MichaelEgli/udemy_angular10#readme",
+  "dependencies": {
+    "@angular/cli": "^11.2.10"
+  }
+}
