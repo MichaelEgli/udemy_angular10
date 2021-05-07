@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-binding.component.css']
 })
 export class DataBindingComponent implements OnInit {
-
+  username = '';
+ 
   constructor() { }
 
   ngOnInit(): void {
