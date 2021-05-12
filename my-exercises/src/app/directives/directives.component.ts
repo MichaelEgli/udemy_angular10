@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class DirectivesComponent implements OnInit {
   doDisplay = false;
   logs = [];
-  count = 0;
+  counter = 0;
 
   constructor() { }
 
@@ -18,8 +18,8 @@ export class DirectivesComponent implements OnInit {
 
   saySomething() {
     this.doDisplay = true;
-    this.count = this.count + 1;
-    this.logs.push(this.count)
+    this.counter = this.counter + 1;
+    this.logs.push(this.counter);
   }
 
 }
