@@ -1,5 +1,6 @@
 <button class="btn btn-primary" (click)="saySomething()">Display Details</button>
 <p *ngIf="doDisplay">secret password = tuna</p>
 <ng-container *ngFor="let log of logs; let i = index">
-    <p [ngStyle]="{backgroundColor: 'blue'}">my log counter: {{ counter }}, index {{i}}</p>
-</ng-container>
+    <p [ngStyle]="{'backgroundColor': i > 3 ? 'blue' : 'white'}"
+        [ngClass]="{bright: i > 3}">my log counter: {{ counter }}, index {{i}}</p>
+</ng-container> 
