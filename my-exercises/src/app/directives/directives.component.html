@@ -2,5 +2,5 @@
 <p *ngIf="doDisplay">secret password = tuna</p>
 <ng-container *ngFor="let log of logs; let i = index">
     <p [ngStyle]="{'backgroundColor': i > 3 ? 'blue' : 'white'}"
-        [ngClass]="{bright: i > 3}">my log counter: {{ counter }}, index {{i}}</p>
+        [ngClass]="{bright: i > 3}">my log counter: {{ counter }}, index {{i}}, output log: {{log}}</p>
 </ng-container> 

@@ -21,7 +21,7 @@ export class DirectivesComponent implements OnInit {
   }
 
   saySomething() {
-    this.doDisplay = true;
+    this.doDisplay = !this.doDisplay;
     this.counter = this.counter + 1;
     this.logs.push(this.counter);
   }
