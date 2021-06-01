@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, 
+  SimpleChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -20,6 +21,30 @@ export class ServerElementComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
     console.log('ngOnInit called!');
+  }
+
+  ngDoCheck(): void{
+    console.log('ngDoCheck called!');
+  }
+
+  ngAfterContentInit() {
+    console.log('ngAfterContentInit called!');
+  }
+
+  ngAfterContentChecked() {
+    console.log('ngAfterContentChecked called!');
+  }
+
+  ngAfterViewInit() {
+    console.log('ngAfterViewInit called!');
+  }
+
+  ngAfterViewChecked() {
+    console.log('ngAfterViewChecked called!');
+  }
+
+  ngOnDestroy() {
+    console.log('ngOnDestroy called!');
   }
 
 }
