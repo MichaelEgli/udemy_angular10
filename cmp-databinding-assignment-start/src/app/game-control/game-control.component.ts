@@ -6,18 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-control.component.css']
 })
 export class GameControlComponent implements OnInit {
+  counter: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onStart(){
-    console.log('start clicked');
+  onStart() {
+    this.counter++
+    console.log('start clicked, counter', this.counter);
   }
 
-  onStop(){
-    console.log('stop clicked');
+  onStop() {
+    this.counter = 0;
+    console.log('stop clicked, counter', this.counter);
   }
 
 }
