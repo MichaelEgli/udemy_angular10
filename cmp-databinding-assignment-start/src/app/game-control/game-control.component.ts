@@ -1,5 +1,4 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
-import EventEmitter = require('events');
 
 @Component({
   selector: 'app-game-control',
