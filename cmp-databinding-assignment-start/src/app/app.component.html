@@ -16,6 +16,6 @@
   <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
   <p>counter on parent: {{counterOnParent}}</p>
   <app-odd *ngIf="counterOnParent%2 === 0" [oddCounter]="counterOnParent"></app-odd>
-  <app-even *ngIf="counterOnParent%2 === 1"  [evenCounter]="counterOnParent"></app-even>
+  <app-even *ngIf="counterOnParent%2 === 1" [evenCounter]="counterOnParent"></app-even>
   </div>
 </div>
