@@ -15,7 +15,7 @@
     </div>
   <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
   <p>counter on parent: {{counterOnParent}}</p>
-  <app-odd></app-odd>
+  <app-odd [oddCounter]="counterOnParent"></app-odd>
   <app-even [evenCounter]="counterOnParent"></app-even>
   </div>
 </div>
