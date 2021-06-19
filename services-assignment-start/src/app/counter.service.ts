@@ -1,5 +1,6 @@
 export class CounterService {
+    counter = 1;
     count(){
-        console.log('hello');
+        console.log('hello', this.counter++);
     }
 }

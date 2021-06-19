@@ -11,6 +11,7 @@ import { UsersService } from './users.service';
 export class AppComponent implements OnInit {
   activeUsers: {name: string}[] = [];
   inactiveUsers: {name: string}[] = [];
+  counter: number;
   @Output() id: number;
 
   constructor(private usersService: UsersService, private counterService: CounterService) {}
@@ -18,5 +19,6 @@ export class AppComponent implements OnInit {
   ngOnInit(){
     this.activeUsers = this.usersService.activeUsers;
     this.inactiveUsers = this.usersService.inactiveUsers;
+    this.counter = this.counterService.counter;
   }
 }
