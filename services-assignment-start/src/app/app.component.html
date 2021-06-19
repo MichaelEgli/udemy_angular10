@@ -1,12 +1,16 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <h3>Active Users</h3>
       <app-active-users
-        [users]="activeUsers"
-        (userSetToInactive)="onSetToInactive($event)"></app-active-users>
+        *ngFor="let user of activeUsers; let i = index"
+        [user]="user"
+        [id]="i"></app-active-users>
+      <h3>Inactive Users</h3>
       <app-inactive-users
-        [users]="inactiveUsers"
-        (userSetToActive)="onSetToActive($event)"></app-inactive-users>
+        *ngFor="let user of inactiveUsers; let i = index"
+        [user]="user"
+        [id]="i"></app-inactive-users>
     </div>
     <!--
       Optimize this app by adding a UsersService which manages the active and inactive users.

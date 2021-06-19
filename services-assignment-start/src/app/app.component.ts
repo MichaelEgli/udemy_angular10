@@ -1,21 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { CounterService } from './counter.service';
+import { UsersService } from './users.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [UsersService, CounterService]
 })
-export class AppComponent {
-  activeUsers = ['Max', 'Anna'];
-  inactiveUsers = ['Chris', 'Manu'];
+export class AppComponent implements OnInit {
+  activeUsers: {name: string}[] = [];
+  inactiveUsers: {name: string}[] = [];
+  @Output() id: number;
 
-  onSetToInactive(id: number) {
-    this.inactiveUsers.push(this.activeUsers[id]);
-    this.activeUsers.splice(id, 1);
-  }
+  constructor(private usersService: UsersService, private counterService: CounterService) {}
 
-  onSetToActive(id: number) {
-    this.activeUsers.push(this.inactiveUsers[id]);
-    this.inactiveUsers.splice(id, 1);
+  ngOnInit(){
+    this.activeUsers = this.usersService.activeUsers;
+    this.inactiveUsers = this.usersService.inactiveUsers;
   }
 }
