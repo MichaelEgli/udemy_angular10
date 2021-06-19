@@ -1,6 +1,9 @@
+import { EventEmitter } from "@angular/core";
+
 export class CounterService {
-    counter = 1;
+    counter = 0;
     count(){
-        console.log('hello', this.counter++);
+        this.counter++;
+        console.log('Counter', this.counter);
     }
 }
