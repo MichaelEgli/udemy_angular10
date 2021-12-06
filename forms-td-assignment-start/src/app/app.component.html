@@ -53,6 +53,7 @@
           type="submit"
           [disabled]="!f.valid">Submit
         </button>
+        <div *ngIf="f.touched && f.invalid">Message - form is touched but not yet valid !!!</div>
       </form>
       <hr>
       <div class="row" *ngIf="submitted">
