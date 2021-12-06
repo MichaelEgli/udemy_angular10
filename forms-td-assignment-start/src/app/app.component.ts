@@ -8,9 +8,12 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   @ViewChild('f') myForm: NgForm;
+  submitted = false;
 
   onSubmit(form: NgForm ) {
     console.log(form);
+
+    this.submitted = true;
   }
 
 }
