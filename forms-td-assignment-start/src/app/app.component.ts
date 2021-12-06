@@ -11,6 +11,7 @@ export class AppComponent {
   submitted = false;
   user = {
     email: '',
+    password: ''
   }
 
   onSubmit(form: NgForm ) {
@@ -18,6 +19,7 @@ export class AppComponent {
 
     this.submitted = true;
     this.user.email = this.myForm.value.email;
+    this.user.password = this.myForm.value.password;
   }
 
 }
