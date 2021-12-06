@@ -9,11 +9,15 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
   @ViewChild('f') myForm: NgForm;
   submitted = false;
+  user = {
+    email: '',
+  }
 
   onSubmit(form: NgForm ) {
     console.log(form);
 
     this.submitted = true;
+    this.user.email = this.myForm.value.email;
   }
 
 }
