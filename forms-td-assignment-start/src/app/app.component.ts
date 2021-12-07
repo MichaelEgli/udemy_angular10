@@ -12,7 +12,8 @@ export class AppComponent {
   user = {
     email: '',
     password: ''
-  }
+  };
+  subscriptions = ['Basic', 'Advanced', 'Pro'];
 
   onSubmit(form: NgForm ) {
     console.log(form);

@@ -19,6 +19,14 @@
           <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
         </div>
         <p></p>
+        <div class="form-group">
+          <label for="subscription">Choose a Subscription</label>
+           <select name="subscription" id="subscription" ngModel class="form-control">
+            <option 
+            *ngFor="let subscription of subscriptions"
+            [value]="subscription">{{ subscription}}</option>
+           </select>
+        </div>
         <div class="row">
           <div class="col-xs-12">
             <div class="btn-group">
