@@ -3,6 +3,7 @@
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
       <form (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div>Template Drive Forms Exercise</div>
+        <div *ngIf="f.touched && f.invalid">Message - form is touched but not yet valid !!!</div>
         <hr>
         <div>
           <label>Email:</label>
@@ -53,7 +54,6 @@
           type="submit"
           [disabled]="!f.valid">Submit
         </button>
-        <div *ngIf="f.touched && f.invalid">Message - form is touched but not yet valid !!!</div>
       </form>
       <hr>
       <div class="row" *ngIf="submitted">
