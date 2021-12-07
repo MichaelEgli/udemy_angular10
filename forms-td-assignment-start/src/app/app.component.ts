@@ -17,7 +17,7 @@ export class AppComponent {
   selectedSubscription = "Advanced";
 
   onSubmit(form: NgForm ) {
-    console.log(form);
+    console.log(form.value);
 
     this.submitted = true;
     this.user.email = this.myForm.value.email;
