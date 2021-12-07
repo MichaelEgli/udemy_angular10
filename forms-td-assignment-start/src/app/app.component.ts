@@ -14,6 +14,7 @@ export class AppComponent {
     password: ''
   };
   subscriptions = ['Basic', 'Advanced', 'Pro'];
+  selectedSubscription = "Advanced";
 
   onSubmit(form: NgForm ) {
     console.log(form);
