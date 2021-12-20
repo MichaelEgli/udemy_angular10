@@ -25,6 +25,9 @@
               id="projectname"
               formControlName="projectname"
               class="form-control">
+              <span *ngIf="projectForm.get('projectData.projectname').errors['nameIsForbidden']">
+                Projectname is forbidden!
+              </span>
           </div>
           <div class="form-group">
             <label for="email">Mail</label>
@@ -40,6 +43,7 @@
             <label for="status">Select a Status</label>
             <select name="status"
              id="status"
+             formControlName="status"
              class="form-control">
             <option *ngFor="let status of states"
             [value]="status">{{ status}}</option>
