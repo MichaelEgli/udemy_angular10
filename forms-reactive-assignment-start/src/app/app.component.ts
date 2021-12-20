@@ -9,11 +9,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class AppComponent implements OnInit {
   projectForm: FormGroup;
   isValid: boolean;
+  states = ['Stable', 'Critical', 'Finished'];
 
   ngOnInit(): void {
     this.projectForm = new FormGroup({
       'projectData': new FormGroup( {
-        'projectname': new FormControl(),
+        'projectname': new FormControl(null),
         'email': new FormControl(null, [Validators.required, Validators.email])
       }),
     });
