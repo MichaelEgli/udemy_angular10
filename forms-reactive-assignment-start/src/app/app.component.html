@@ -26,6 +26,16 @@
               formControlName="projectname"
               class="form-control">
           </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              id="email"
+              formControlName="email"
+              class="form-control">
+              <span
+              *ngIf="!projectForm.get('projectData.email').valid && projectForm.get('projectData.email').touched">Please enter a valid email!</span>
+          </div>
         </div>
         <button class="btn btn-primary" type="submit">Submit</button>
       </form>
