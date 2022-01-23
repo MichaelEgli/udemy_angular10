@@ -6,7 +6,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ReversePipe implements PipeTransform {
 
   transform(value: any, ...args: any[]): any {
-    return console.log('Hello');
+    let newString: string = "";
+    for (var i = value.length - 1; i >= 0; i--) {
+      newString += value.charAt(i);
+    }
+    return newString
   }
 
 }
