@@ -10,7 +10,7 @@ import { Post } from './post.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  loadedPosts = [];
+  loadedPosts: Post[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -43,6 +43,7 @@ export class AppComponent implements OnInit {
     this.http
     .get< { [key: string]: Post }>('https://ng-complete-guide-53bf4-default-rtdb.europe-west1.firebasedatabase.app/posts.json')
     .pipe(map(responseData => {
+      console.log('responseData', responseData);
       const postsArray: Post[] = [];
       for (const key in responseData) {
         if (responseData.hasOwnProperty(key)) {
@@ -52,7 +53,8 @@ export class AppComponent implements OnInit {
       return postsArray;
     }))
     .subscribe(posts => {
-      console.log(posts);
+      console.log('posts', posts);
+      this.loadedPosts = posts;
     });
   }
 }
